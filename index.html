@@ -2215,8 +2215,6 @@
                   <img src="https://raw.githubusercontent.com/TheLp281/LiventCordPages/refs/heads/main/static/images/wardmarkcolor.png" loading="lazy" alt="" class="discord2">
                 </div>
                 <div class="div-block-4">
-                  <a href="https://liventcord.loophole.site" data-track-nav="download" class="nav-link w-nav-link" id="loophole-link">liventcord.loophole.site<span id="loophole-status"></span></a>
-                  <a href="https://liventcord.serveo.net" data-track-nav="download" class="nav-link w-nav-link" id="serveo-link">liventcord.serveo.net<span id="serveo-status"></span></a>
                   <a href="/LiventCordPages/download.html" data-track-nav="download" class="nav-link w-nav-link">Download</a>
                 
                 </div>
@@ -2469,42 +2467,7 @@
     
     </script><script src="https://discord.com/w/assets/b960ac7f559c3a04d18e7cce9de42c4b94a33dd4/index-react.js" async=""></script><a class="w-webflow-badge" href="https://webflow.com?utm_campaign=brandjs"><img src="https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon-d2.89e12c322e.svg" alt="" style="margin-right: 4px; width: 26px;"><img src="https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-text-d2.c82cec3b78.svg" alt="Made in Webflow"></a><div id="onetrust-consent-sdk"><div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div></div><script src="https://www.youtube.com/iframe_api"></script>
   
-    <script>
-      function fetchDomainStatus(successCallback, errorCallback) {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://app.liventcord.workers.dev/check_domains', true);
-        xhr.onload = function () {
-          if (xhr.status === 200) {
-            const response = JSON.parse(xhr.responseText);
-            successCallback(response);
-          } else {
-            errorCallback(new Error('Failed to fetch domain status.'));
-          }
-        };
-        xhr.onerror = function () {
-          errorCallback(new Error('Network error occurred.'));
-        };
-        xhr.send(); 
-      }
     
-      function updateStatus(linkId, statusId, isActive) {
-        const status = document.getElementById(statusId);
-        status.innerHTML = isActive ? '✅' : '❌';
-      }
-    
-      document.addEventListener("DOMContentLoaded", function() {
-        fetchDomainStatus(function(response) {
-          // Update statuses based on the response from the backend
-          updateStatus('serveo-link', 'serveo-status', response['liventcord.serveo.net']);
-          updateStatus('loophole-link', 'loophole-status', response['liventcord.loophole.site']);
-        }, function(error) {
-          console.error(error);
-          // Optionally update the status to indicate an error
-          updateStatus('serveo-link', 'serveo-status', false);
-          updateStatus('loophole-link', 'loophole-status', false);
-        });
-      });
-    </script>
     
     
     </body>
